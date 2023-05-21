@@ -13,7 +13,7 @@ function SearchCountry() {
 	}
 
 	return (
-		<div>
+		<div className="container-fluid">
 			<div className="m-5">
 				<h1>Search Burger</h1>
 				<form className="row g3" onSubmit={handleSearchFruit}>

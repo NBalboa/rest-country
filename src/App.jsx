@@ -1,6 +1,7 @@
 import Nav from "./component/Nav";
 import SearchCountry from "./component/SearchCountry";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { useEffect } from "react";
 // import axios from "axios";
 
@@ -16,12 +17,14 @@ const queryClient = new QueryClient({
 function App() {
 	return (
 		<>
-			<QueryClientProvider client={queryClient}>
-				<Nav />
-				<div className="container-md">
-					<SearchCountry />
-				</div>
-			</QueryClientProvider>
+			<BrowserRouter>
+				<QueryClientProvider client={queryClient}>
+					<Nav />
+					<Routes>
+						<Route path="/" element={<SearchCountry />} />
+					</Routes>
+				</QueryClientProvider>
+			</BrowserRouter>
 		</>
 	);
 }
