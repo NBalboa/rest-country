@@ -15,14 +15,14 @@ function SearchCountry() {
 	return (
 		<div className="container-fluid">
 			<div className="m-5">
-				<h1>Search Burger</h1>
+				<h1>Search Country</h1>
 				<form className="row g3" onSubmit={handleSearchFruit}>
 					<div className="col-md-12">
 						<label
 							htmlFor="queryBurger"
 							className="form-label fs-4 fw-bold"
 						>
-							Burger Name
+							Country Name
 						</label>
 						<input
 							type="text"
